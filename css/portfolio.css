@@ -1,0 +1,126 @@
+:root {
+    --link-color:black;
+    --active-link-color: #2196F3;
+    --bkg-color: #2F303A;
+}
+body {
+    font-family: Roboto;
+}
+
+   /* nav */
+
+.nav-list-item:hover{
+    color: #2196F3;
+}
+.nav-list-item {
+    color: var(--link-color);
+    font-weight: 500;
+}
+.number {
+    color: #757575;
+}
+.nav-list-item-portfolio {
+    color: var(--active-link-color);
+    text-decoration: none; 
+    font-size: 14px;
+    font-weight: 400;
+}
+.nav-list-item-portfolio:hover {
+    color: black;
+}
+.number:hover {
+    color: #2196F3;
+}
+.web {
+    font-family: Raleway;
+    color: #2196F3; 
+    font-size: 26px;
+}
+.header-logo {
+    font-family: Raleway;
+    text-decoration: none; 
+    color: black;
+    font-size: 26px;
+}
+.nav-list-item {
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 14px;
+} 
+.number {
+    font-weight: 400;
+    text-decoration: none; 
+    font-size: 14px;
+}
+
+    /* button */
+
+.section-portfolio {
+    text-align: center;
+}
+button:hover {
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+.filter-list-btn {
+    background-color: #F5F4FA;
+    padding: 8px 20px 8px 20px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+}
+.active {
+    background-color: #2196F3;
+    padding: 8px 20px 8px 20px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+    /* card */
+
+.portfolio-list-item:hover {
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+.portfolio-list-item {
+    width: 370px;
+    height: 404px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #EEEEEE;
+    margin: 0 30px 30px;
+}
+.portfolio-list-title {
+    padding-left: 30px;
+    font-weight: 700;
+}
+.portfolio-list-desc {
+    padding-left: 30px;
+    font-weight: 400;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--bkg-color);
+    color:white;
+    width: 100%;
+    height: 252px;
+    padding: 10px;
+}
+.footer-logo {
+    font-family: Raleway;
+    text-decoration: none; 
+    color: white; 
+    font-size: 26px;
+}
+.address-list-location {
+    text-decoration: none; color: #FFFFFF;
+    font-weight: 400;
+}
+.address-list-link {
+    font-weight: 400;
+    text-decoration: none; 
+    color: #FFFFFF99;
+}
