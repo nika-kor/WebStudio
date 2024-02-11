@@ -1,0 +1,109 @@
+.footer {
+    background-color: $bkg-color;
+    color:white;
+    width: 100%;
+    padding: 10px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+
+    &-wrap {
+        display: flex;
+        gap: 70px;
+    }
+
+    .address-list {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        gap: 9px;
+        padding-top: 20px;
+    } 
+    
+    &-logo {
+        font-family: Raleway;
+        color: white; 
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+    }
+    .logo {
+        font-family: Raleway; 
+        color: #2196F3; 
+        font-size: 26px;  
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+    }
+    .address-list-location { 
+        color: #FFFFFF;
+        font-weight: 400;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+    }
+    .address-list-link {
+        font-weight: 400; 
+        color: #FFFFFF99;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+    }
+    &-title {
+        padding-bottom: 20px;
+        color: #FFF;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+    }
+    &-list {
+        display: flex;
+        gap: 10px;
+    }
+    &-list-item-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.10);
+        color: #FFFFFF;
+        transition: all 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &-list-item-link svg {
+        fill: currentColor;
+    }
+    &-list-item-link:hover {
+        background-color: #2196F3;
+        color: #FFFFFF;
+    }
+    
+    &-form-title {
+        color: #FFF;
+        
+        font-weight: 700;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    &-form-label {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+    &-input {
+        width: 358px;
+        height: 50px;
+        border-radius: 4px;
+        padding: 15px 16px 15px 16px;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.30);
+        background-color: rgba(33, 150, 243, 0.00);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        color: #fff;
+    }
+    &-input:focus-visible {
+        outline: 1px solid $active-link-color;
+    }
+    
+}

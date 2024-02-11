@@ -1,0 +1,63 @@
+.section-features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 0;
+    }
+    .features-decoration-first::before {
+        content: "";
+        background-image: url(../imagemain/groupantene.jpg);
+        width: 270px;
+        height: 120px;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+    .features-decoration-second::before {
+        content: "";
+        background-image: url(../imagemain/groupclock.png);
+        width: 270px;
+        height: 120px;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+    .features-decoration-third::before {
+        content: "";
+        background-image: url(../imagemain/groupdiagram.png);
+        width: 270px;
+        height: 120px;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+    .features-decoration-fourth::before {
+        content: "";
+        background-image: url(../imagemain/groupcosmo.png);
+        width: 270px;
+        height: 120px;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+    .features-list-title {
+        margin-top: 0;
+        font-weight: 700;
+        font-size: 15px; 
+        color: black;
+        max-width: 270px;
+        line-height: 1.1;
+        letter-spacing: 0.03em;
+        text-align: left;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    .features-list-desc {
+        font-weight: 400;
+        color: #757575; 
+        max-width: 270px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+        text-align: left;
+    }
+}

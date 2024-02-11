@@ -1,0 +1,44 @@
+.section-work {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    .work-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+
+        &-item-wrap {
+            position: relative;
+            max-width: 370px;
+            width: 100%;
+        }
+        &-item-desc {
+            max-width: 370px;
+            width: 100%;
+            color: #FFF;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 0.42px;
+            text-transform: uppercase;
+            background: rgba(47, 48, 58, 0.80);
+            padding-top: 27px;
+            padding-bottom: 27px;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    &-title {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .list-item-img {
+        max-width: 370px;
+        width: 100%;
+    }
+}
+
