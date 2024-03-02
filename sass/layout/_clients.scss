@@ -3,22 +3,16 @@
     padding-bottom: 94px;
 
     &-title {
-        color: #212121;
+        @include property(36px, normal, 700, Roboto, #212121);
         text-align: center;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 700;
         letter-spacing: 1.08px;
     }
     &-list {
-        display: flex;
-        justify-content: space-between;
+        @include flex(flex, space-between, center);
         padding-top: 50px;
     }
     &-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(flex, center, center);
         color: #AFB1B8;
         outline: 1px solid #AFB1B8;
         border-radius: 4px;

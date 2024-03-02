@@ -1,0 +1,13 @@
+@mixin property($fz, $fs, $fw, $ff, $color) {
+   font-size: $fz;
+   font-style: $fs;
+   font-weight: $fw;
+   font-family: $ff;
+   color: $color;
+}  
+
+@mixin flex($df, $jco, $ali) {
+    display: $df;
+    justify-content: $jco;
+    align-items: $ali;
+}

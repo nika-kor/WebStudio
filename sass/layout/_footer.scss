@@ -8,7 +8,7 @@
 
 
     &-wrap {
-        display: flex;
+        @include flex(flex, _, center);
         gap: 70px;
     }
 
@@ -21,48 +21,37 @@
     } 
     
     &-logo {
-        font-family: Raleway;
-        color: white; 
-        font-size: 26px;
-        font-weight: 700;
+        @include property(26px, normal, 700, Raleway, white);
         line-height: 1.2;
         letter-spacing: 0.03em;
     }
     .logo {
-        font-family: Raleway; 
-        color: #2196F3; 
-        font-size: 26px;  
+        @include property(26px, normal, 700, Raleway, #2196F3);
         line-height: 1.2;
         letter-spacing: 0.03em;
     }
     .address-list-location { 
-        color: #FFFFFF;
-        font-weight: 400;
+        @include property(14px, normal, 400, Roboto, #FFFFFF);
         line-height: 1.7;
         letter-spacing: 0.03em;
     }
     .address-list-link {
-        font-weight: 400; 
-        color: #FFFFFF99;
+        @include property(14px, normal, 400, Roboto, #FFFFFF99);
         line-height: 1.7;
         letter-spacing: 0.03em;
     }
     &-title {
+        @include property(14px, normal, 700, Roboto, #FFFFFF);
         padding-bottom: 20px;
-        color: #FFF;
-        font-style: normal;
-        font-weight: 700;
         letter-spacing: 0.42px;
         text-transform: uppercase;
     }
     &-list {
-        display: flex;
+        @include flex(flex, _, center);
         gap: 10px;
     }
     &-list-item-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(flex, center, center);
         padding: 12px;
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.10);
@@ -79,17 +68,14 @@
     }
     
     &-form-title {
-        color: #FFF;
-        
-        font-weight: 700;
+        @include property(14px, normal, 700, Roboto, #FFF);
         letter-spacing: 0.42px;
         text-transform: uppercase;
         margin-bottom: 20px;
     }
     &-form-label {
-        display: flex;
+        @include flex(flex, _, center);
         gap: 12px;
-        align-items: center;
     }
     &-input {
         width: 358px;

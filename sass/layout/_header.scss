@@ -7,21 +7,17 @@ header {
     border-bottom: 2px solid #ECECEC;
 
     .nav {
-        display: flex;
-        justify-content: space-between;
+        @include flex(flex, space-between, center);
         gap: 93px;
-        align-items: center;
 
         &-list {
             display: flex;
             gap: 50px;
         }
         &-list-link {
-            color: $main-color; 
-            font-weight: 400;
+            @include property(14px, normal, 500, Roboto, $main-color);
             line-height: 1.1;
             letter-spacing: 0.02em;
-            font-size: inherit;
             text-align: left;
             transition: all 0.5s;
             position: relative;
@@ -36,7 +32,7 @@ header {
         &-list-link::after {
             content: "";
             position: absolute;
-            margin-top: -1px;
+            // margin-top: -1px;
             top: 100%;
             left: 0;
             width: 100%;
@@ -55,15 +51,13 @@ header {
         }
     }
     .wrap-nav {
+        @include flex(flex, space-between, center);
         max-width: 1200px;
         width: 100%;
         margin: 0 auto;
         padding-top: 25px;
         padding-bottom: 25px;
-        display: flex;
-        justify-content: space-between;
         gap: 93px;
-        align-items: center;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -74,23 +68,22 @@ header {
         margin-left: auto;
 
         &-link {
-            color: $main-color;
-            font-size: inherit;
-            font-weight: 500;
+            @include property(14px, normal, 500, Roboto, $main-color);
             line-height: 1.1;
             letter-spacing: 0.02em;
             transition: all 250ms;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+            &:hover {
+                color: #2196F3;
+            }
         }
-        &-link svg {
+        &-icon {
             fill: currentColor;
         }
-        &-link:hover {
-            color: #2196F3;
-        }
+
         &-link {
-            font-weight: 400; 
-            color: #757575;
+            @include property(14px, normal, 400, Roboto, #757575);
             line-height: 1.1;
             letter-spacing: 0.02em;
             text-align: left;
@@ -98,24 +91,10 @@ header {
     }
     
     .logo {
-        font-family: Raleway; 
-        color:  #2196F3;
-        font-size: 26px;
+        @include property(26px, normal, 700, Raleway, $active-link-color);
     } 
     .header-logo {
-        font-family: Raleway;
-        color: black; 
-        font-size: 26px;
-        font-weight: 700;
-        line-height: 1.2;
-        letter-spacing: 0.03em;
-        text-align: left;
-    }
-    .studio {
-        font-weight: 500;
-        color: #2F303A;
-        font-size: 26px;
-        font-weight: 700;
+        @include property(26px, normal, 700, Raleway, $main-color);
         line-height: 1.2;
         letter-spacing: 0.03em;
         text-align: left;

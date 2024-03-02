@@ -4,15 +4,14 @@
     padding-bottom: 94px;
 
     &-title {
-        font-size: 36px;
-        font-weight: 700;
+        @include property(36px, normal, 700, Roboto, $main-color);
         line-height: 1.2;
         letter-spacing: 0.03em;
         text-align: center;
         margin-bottom: 50px;
     }
     .team-list {
-        display: flex;
+        @include flex(flex, center, center);
         gap: 30px;
         padding: 0;
 
@@ -24,8 +23,7 @@
             box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001F;
         }
         &-second {
-            display: flex;
-            justify-content: space-between;
+            @include flex(flex, space-between, center);
             padding: 16px 32px 30px 32px;
         }
         &-item-second-link {
@@ -34,9 +32,7 @@
             color: #AFB1B8;
             transition: all 250ms;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex(flex, center, center);
         }
         &-item-second-link svg {
             fill: currentColor;
@@ -47,9 +43,7 @@
         }
 
         &-title {
-            font-weight: 500;
-            color: black; 
-            font-size: 16px; 
+            @include property(16px, normal, 500, Roboto, $main-color);
             text-align: center;
             line-height: 1.2;
             letter-spacing: 0.03em;
@@ -57,10 +51,8 @@
             padding-bottom: 10px;
         }
         &-desc {
-            font-weight: 400;
-            color: #757575; 
+            @include property(16px, normal, 400, Roboto, #757575);
             text-align: center;
-            font-size: 16px;
             line-height: 1.2;
             letter-spacing: 0.03em;
         }

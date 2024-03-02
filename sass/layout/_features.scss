@@ -3,8 +3,7 @@
     padding-bottom: 94px;
 
     &-list {
-        display: flex;
-        justify-content: space-between;
+        @include flex(flex, space-between, center);
         gap: 30px;
         padding: 0;
     }
@@ -41,10 +40,8 @@
         margin-bottom: 30px;
     }
     .features-list-title {
+        @include property(15px, normal, 700, Roboto, $main-color);
         margin-top: 0;
-        font-weight: 700;
-        font-size: 15px; 
-        color: black;
         max-width: 270px;
         line-height: 1.1;
         letter-spacing: 0.03em;
@@ -53,8 +50,7 @@
         padding-top: 30px;
     }
     .features-list-desc {
-        font-weight: 400;
-        color: #757575; 
+        @include property(14px, normal, 400, Roboto, #757575);
         max-width: 270px;
         line-height: 1.7;
         letter-spacing: 0.03em;
