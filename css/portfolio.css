@@ -87,6 +87,7 @@ img {
   transition: background-color 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 auto;
 }
 .footer-form-btn:hover {
   background-color: #145c96;
@@ -253,6 +254,8 @@ header .nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 93px;
 }
 header .nav-list {
@@ -312,6 +315,8 @@ header .wrap-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -396,11 +401,12 @@ header .header-logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 1200px;
   width: 100%;
   padding: 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .portfolio .portfolio-list-img {
@@ -489,32 +495,32 @@ header .header-logo {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: _;
-      -ms-flex-pack: _;
-          justify-content: _;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 70px;
+.footer-input {
+  height: 50px;
+  border-radius: 4px;
+  padding: 15px 16px 15px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(33, 150, 243, 0);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  color: #fff;
 }
-.footer .address-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-left: 0;
-  gap: 9px;
-  padding-top: 20px;
+.footer-input:focus-visible {
+  outline: 1px solid #2196F3;
+}
+.footer-form-title {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  font-family: Roboto;
+  color: #FFF;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .footer-logo {
-  font-size: 26px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
   font-family: Raleway;
@@ -523,7 +529,7 @@ header .header-logo {
   letter-spacing: 0.03em;
 }
 .footer .logo {
-  font-size: 26px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
   font-family: Raleway;
@@ -549,28 +555,6 @@ header .header-logo {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
-.footer-title {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  font-family: Roboto;
-  color: #FFFFFF;
-  padding-bottom: 20px;
-  letter-spacing: 0.42px;
-  text-transform: uppercase;
-}
-.footer-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: _;
-      -ms-flex-pack: _;
-          justify-content: _;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-}
 .footer-list-item-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -581,6 +565,8 @@ header .header-logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 12px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
@@ -597,40 +583,182 @@ header .header-logo {
   background-color: #2196F3;
   color: #FFFFFF;
 }
-.footer-form-title {
+.footer-title {
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
   font-family: Roboto;
-  color: #FFF;
+  color: #FFFFFF;
+  padding-bottom: 20px;
   letter-spacing: 0.42px;
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
-.footer-form-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: _;
-      -ms-flex-pack: _;
-          justify-content: _;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 12px;
+
+@media screen and (max-width: 767px) {
+  .footer-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 70px;
+    text-align: center;
+  }
+  .footer .address-list {
+    padding-top: 20px;
+    text-align: center;
+  }
+  .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-form-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-input {
+    width: 100%;
+  }
 }
-.footer-input {
-  width: 358px;
-  height: 50px;
-  border-radius: 4px;
-  padding: 15px 16px 15px 16px;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: rgba(33, 150, 243, 0);
-  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  color: #fff;
+@media screen and (min-width: 768px) {
+  .footer-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 70px;
+    text-align: center;
+  }
+  .footer .address-list {
+    padding-top: 20px;
+    text-align: center;
+  }
+  .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-form-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-input {
+    width: 100%;
+  }
 }
-.footer-input:focus-visible {
-  outline: 1px solid #2196F3;
+@media screen and (min-width: 1200px) {
+  .footer-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 70px;
+  }
+  .footer .address-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+    gap: 9px;
+    padding-top: 20px;
+  }
+  .footer-logo {
+    font-size: 26px;
+  }
+  .footer .logo {
+    font-size: 26px;
+  }
+  .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-form-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-input {
+    width: 358px;
+  }
 }/*# sourceMappingURL=portfolio.css.map */

@@ -1,61 +1,157 @@
-.section-team {
-    background-color: #F5F4FA;
-    padding-top: 94px;
-    padding-bottom: 94px;
 
-    &-title {
-        @include property(36px, normal, 700, Roboto, $main-color);
-        line-height: 1.2;
-        letter-spacing: 0.03em;
-        text-align: center;
-        margin-bottom: 50px;
-    }
-    .team-list {
-        @include flex(flex, center, center);
-        gap: 30px;
-        padding: 0;
-
-        &-item {
-            width: 100%;
-            max-width: 270px;
-            background-color: white;
-            border-radius: 0px 0px 4px 4px;
-            box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001F;
-        }
-        &-second {
-            @include flex(flex, space-between, center);
-            padding: 16px 32px 30px 32px;
-        }
-        &-item-second-link {
-            border-radius: 50%;
-            padding: 12px;
-            color: #AFB1B8;
-            transition: all 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            @include flex(flex, center, center);
-        }
-        &-item-second-link svg {
-            fill: currentColor;
-        }
-        &-item-second-link:hover {
-            color: #FFFFFF;
-            background-color: #2196F3;
-        }
+.team-list-title {
+    @include property(16px, normal, 500, Roboto, $main-color);
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.team-list-desc {
+    @include property(16px, normal, 400, Roboto, #757575);
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+}
+.section-team-title {
+    @include property(_, normal, 700, Roboto, $main-color);
+            line-height: 1.2;
+            letter-spacing: 0.03em;
+            text-align: center;
+            margin-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+    .section-team {
+        background-color: #F5F4FA;
+        padding-top: 60px;
+        padding-bottom: 60px;
 
         &-title {
-            @include property(16px, normal, 500, Roboto, $main-color);
-            text-align: center;
-            line-height: 1.2;
-            letter-spacing: 0.03em;
-            padding-top: 30px;
-            padding-bottom: 10px;
+            font-size: 28px;
         }
-        &-desc {
-            @include property(16px, normal, 400, Roboto, #757575);
-            text-align: center;
-            line-height: 1.2;
-            letter-spacing: 0.03em;
+
+        .team-list {
+            @include flex(flex, center, center);
+            gap: 30px;
+            padding: 0;
+    
+            &-item {
+                width: 100%;
+                max-width: 450px;
+                background-color: white;
+                border-radius: 0px 0px 4px 4px;
+                box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001F;
+            }
+            &-second {
+                @include flex(flex, space-between, center);
+                padding: 16px 122px 30px 122px;
+            }
+            &-item-second-link {
+                border-radius: 50%;
+                padding: 12px;
+                color: #AFB1B8;
+                transition: all 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                @include flex(flex, center, center);
+            }
+            &-item-second-link svg {
+                fill: currentColor;
+            }
+            &-item-second-link:hover {
+                color: #FFFFFF;
+                background-color: #2196F3;
+            }
         }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-team {
+        background-color: #F5F4FA;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    
+        &-title {
+            font-size: 28px;
+        }
+        .team-list {
+            @include flex(flex, center, center);
+            gap: 30px;
+            padding: 0;
+    
+            &-item {
+                width: 100%;
+                max-width: 354px;
+                background-color: white;
+                border-radius: 0px 0px 4px 4px;
+                box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001F;
+            }
+            &-second {
+                @include flex(flex, space-between, center);
+                padding: 16px 74px 30px 74px;
+            }
+            &-item-second-link {
+                border-radius: 50%;
+                padding: 12px;
+                color: #AFB1B8;
+                transition: all 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                @include flex(flex, center, center);
+            }
+            &-item-second-link svg {
+                fill: currentColor;
+            }
+            &-item-second-link:hover {
+                color: #FFFFFF;
+                background-color: #2196F3;
+            }
+        }
+        
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section-team {
+        background-color: #F5F4FA;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    
+        &-title {
+            font-size: 36px;
+        }
+        .team-list {
+            @include flex(flex, center, center);
+            gap: 30px;
+            padding: 0;
+    
+            &-item {
+                width: 100%;
+                max-width: 270px;
+                background-color: white;
+                border-radius: 0px 0px 4px 4px;
+                box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001F;
+            }
+            &-second {
+                @include flex(flex, space-between, center);
+                padding: 16px 32px 30px 32px;
+            }
+            &-item-second-link {
+                border-radius: 50%;
+                padding: 12px;
+                color: #AFB1B8;
+                transition: all 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                @include flex(flex, center, center);
+            }
+            &-item-second-link svg {
+                fill: currentColor;
+            }
+            &-item-second-link:hover {
+                color: #FFFFFF;
+                background-color: #2196F3;
+            }
+        }
+        
     }
     
 }

@@ -1,30 +1,76 @@
-.clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
 
-    &-title {
-        @include property(36px, normal, 700, Roboto, #212121);
-        text-align: center;
-        letter-spacing: 1.08px;
-    }
-    &-list {
-        @include flex(flex, space-between, center);
-        padding-top: 50px;
-    }
-    &-link {
-        @include flex(flex, center, center);
-        color: #AFB1B8;
-        outline: 1px solid #AFB1B8;
-        border-radius: 4px;
-        padding: 16px 32px 16px 32px;
-        transition: all 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    &-link svg {
-        fill: currentColor;
-    }
-    &-link:hover {
-        color: $active-link-color;
-        outline: 1px solid $active-link-color;
+.clients-title {
+    @include property(33px, normal, 700, Roboto, #212121);
+    text-align: center;
+    letter-spacing: 1.08px;
+}
+.clients-link {
+    @include flex(flex, center, center);
+    color: #AFB1B8;
+    outline: 1px solid #AFB1B8;
+    border-radius: 4px;
+    transition: all 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients-link svg {
+    fill: currentColor;
+}
+.clients-link:hover {
+    color: $active-link-color;
+    outline: 1px solid $active-link-color;
+}
+
+@media screen and (max-width: 767px) {
+    .clients {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        &-list {
+            @include flex(flex, center, center);
+            gap: 30px;
+            padding-top: 50px;
+        }
+        &-link {
+            width: 210px;
+            height: 92px;
+        }
     }
 }
+
+@media screen and (min-width: 768px) {
+    .clients {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    
+        &-list {
+            @include flex(flex, center, center);
+            padding-top: 50px;
+            gap: 30px;
+        }
+        &-link {
+            width: 226px;
+            height: 92px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .clients {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    
+        &-title {
+            font-size: 36px;
+        }
+        &-list {
+            @include flex(flex, space-between, center);
+            padding-top: 50px;
+        }
+        &-link {
+            width: 170px;
+            height: 92px;
+        }
+    }
+    
+}
+

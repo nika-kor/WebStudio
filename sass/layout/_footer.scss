@@ -1,3 +1,4 @@
+
 .footer {
     background-color: $bkg-color;
     color:white;
@@ -6,27 +7,32 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-
-    &-wrap {
-        @include flex(flex, _, center);
-        gap: 70px;
+    &-input {
+        height: 50px;
+        border-radius: 4px;
+        padding: 15px 16px 15px 16px;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.30);
+        background-color: rgba(33, 150, 243, 0.00);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        color: #fff;
     }
-
-    .address-list {
-        display: flex;
-        flex-direction: column;
-        padding-left: 0;
-        gap: 9px;
-        padding-top: 20px;
-    } 
-    
+    &-input:focus-visible {
+        outline: 1px solid $active-link-color;
+    }
+    &-form-title {
+        @include property(14px, normal, 700, Roboto, #FFF);
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
     &-logo {
-        @include property(26px, normal, 700, Raleway, white);
+        @include property(24px, normal, 700, Raleway, white);
         line-height: 1.2;
         letter-spacing: 0.03em;
     }
     .logo {
-        @include property(26px, normal, 700, Raleway, #2196F3);
+        @include property(24px, normal, 700, Raleway, #2196F3);
         line-height: 1.2;
         letter-spacing: 0.03em;
     }
@@ -40,16 +46,7 @@
         line-height: 1.7;
         letter-spacing: 0.03em;
     }
-    &-title {
-        @include property(14px, normal, 700, Roboto, #FFFFFF);
-        padding-bottom: 20px;
-        letter-spacing: 0.42px;
-        text-transform: uppercase;
-    }
-    &-list {
-        @include flex(flex, _, center);
-        gap: 10px;
-    }
+
     &-list-item-link {
         @include flex(flex, center, center);
         padding: 12px;
@@ -66,30 +63,112 @@
         background-color: #2196F3;
         color: #FFFFFF;
     }
-    
-    &-form-title {
-        @include property(14px, normal, 700, Roboto, #FFF);
+    &-title {
+        @include property(14px, normal, 700, Roboto, #FFFFFF);
+        padding-bottom: 20px;
         letter-spacing: 0.42px;
         text-transform: uppercase;
-        margin-bottom: 20px;
     }
-    &-form-label {
-        @include flex(flex, _, center);
-        gap: 12px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .footer {
+
+        &-wrap {
+            @include flex(flex, center, center);
+            gap: 70px;
+            text-align: center;
+        }
+    
+        .address-list {
+            padding-top: 20px;
+            text-align: center;
+        } 
+        
+        &-list {
+            @include flex(flex, _, center);
+            gap: 10px;
+        }
+        
+        &-form-label {
+            @include flex(flex, _, center);
+            gap: 12px;
+        }
+        &-input {
+            width: 100%;
+        }
+        
+        
     }
-    &-input {
-        width: 358px;
-        height: 50px;
-        border-radius: 4px;
-        padding: 15px 16px 15px 16px;
-        border-radius: 4px;
-        border: 1px solid rgba(255, 255, 255, 0.30);
-        background-color: rgba(33, 150, 243, 0.00);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-        color: #fff;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+
+        &-wrap {
+            @include flex(flex, space-around, center);
+            gap: 70px;
+            text-align: center;
+        }
+    
+        .address-list {
+            padding-top: 20px;
+            text-align: center;
+        } 
+        
+        &-list {
+            @include flex(flex, _, center);
+            gap: 10px;
+        }
+        
+        &-form-label {
+            @include flex(flex, _, center);
+            gap: 12px;
+        }
+        &-input {
+            width: 100%;
+        }
+        
+        
     }
-    &-input:focus-visible {
-        outline: 1px solid $active-link-color;
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+    
+        &-wrap {
+            @include flex(flex, _, center);
+            gap: 70px;
+        }
+    
+        .address-list {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            gap: 9px;
+            padding-top: 20px;
+        } 
+        &-logo {
+            font-size: 26px;
+        }
+        .logo {
+            font-size: 26px;
+        }
+        &-list {
+            @include flex(flex, _, center);
+            gap: 10px;
+        }
+        
+        &-form-label {
+            @include flex(flex, _, center);
+            gap: 12px;
+        }
+        &-input {
+            width: 358px;
+        }
+        
     }
     
 }
