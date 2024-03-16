@@ -18,6 +18,17 @@
         z-index: 1;
         padding: 16px 15px 16px 15px;
 
+        .wrap-nav {
+            @include flex(flex, space-between, center);
+
+            .burger {
+                @include flex(flex, center, center);
+                background-color: white;
+                padding: 2px
+            }
+
+        }
+
         .nav {
             @include flex(flex, _, _);
 
@@ -38,6 +49,10 @@
         top: 0;
         left: 0;
         z-index: 1;
+
+        .burger {
+            display: none;
+        }
 
         .nav {
             @include flex(flex, space-between, center);

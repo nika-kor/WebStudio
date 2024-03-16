@@ -104,7 +104,7 @@
     
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
     .footer {
 
         &-wrap {
@@ -144,7 +144,6 @@
         }
     
         .address-list {
-            display: flex;
             flex-direction: column;
             padding-left: 0;
             gap: 9px;

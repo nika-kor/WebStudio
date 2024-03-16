@@ -12,3 +12,9 @@
     align-items: $ali;
     flex-wrap: wrap;
 }
+
+@mixin tab($breakpoint){
+    @media screen and (min-width:$breakpoint){
+    @content;
+    }
+}
