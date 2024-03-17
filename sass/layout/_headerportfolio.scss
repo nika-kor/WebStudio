@@ -7,6 +7,60 @@ header {
     z-index: 1;
     border-bottom: 2px solid #ECECEC;
 }
+.wrap-nav {
+    @include flex(flex, space-between, center);
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 19px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.nav {
+    @include flex(flex, space-between, center);
+    gap: 87px;
+
+    &-list {
+        display: flex;
+        gap: 50px;
+    }
+    &-list-link {
+        @include property(14px, normal, 500, Roboto, $main-color);
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        text-align: left;
+        transition: all 0.5s;
+        position: relative;
+        transition: all 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &-list-link:hover {
+        color: $active-link-color;
+    }
+    
+    &-list-link::after {
+        content: "";
+        position: absolute;
+        // margin-top: 1px;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        // margin-top: -2px;
+        background-color: transparent;
+        border-radius: 2px;
+        transition: all 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &-list-link:hover::after, 
+    &-list-link.active::after {
+        background-color: $active-link-color;
+    }
+    .active {
+        color: $active-link-color;
+    }
+}
 .logo {
     @include property(26px, normal, 700, Raleway, $active-link-color);
 } 
@@ -16,11 +70,13 @@ header {
     letter-spacing: 0.03em;
     text-align: left;
 }
+.burger {
+    display: none;
+}
 
-@media screen and (max-width: 767px) {
+@include phone(767px) {
 
     header {
-        padding: 16px 15px 16px 15px;
 
         .wrap-nav {
             @include flex(flex, space-between, center);
@@ -30,86 +86,28 @@ header {
                 background-color: white;
                 padding: 2px
             }
-
-        }
-
-        .nav {
-            @include flex(flex, _, _);
-
-            &-list {
+            .nav {
+                @include flex(flex, _, _);
+    
+                &-list {
+                    display: none;
+                }
+            }
+            .contacts-list {
                 display: none;
             }
+
         }
-        .contacts-list {
-            display: none;
-        }
+
     }
 }
 
-@media screen and (min-width: 768px) {
+@include tab (1199px) {
     header {
-
-        .burger {
-            display: none;
-        }
-
-        .nav {
-            @include flex(flex, space-between, center);
-            gap: 87px;
     
-            &-list {
-                display: flex;
-                gap: 50px;
-            }
-            &-list-link {
-                @include property(14px, normal, 500, Roboto, $main-color);
-                line-height: 1.1;
-                letter-spacing: 0.02em;
-                text-align: left;
-                transition: all 0.5s;
-                position: relative;
-                padding: 32px  2px 29px 2px;
-                transition: all 250ms;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            }
-            &-list-link:hover {
-                color: $active-link-color;
-            }
-            
-            &-list-link::after {
-                content: "";
-                position: absolute;
-                // margin-top: -1px;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                height: 4px;
-                // margin-top: -2px;
-                background-color: transparent;
-                border-radius: 2px;
-                transition: all 250ms;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            }
-            &-list-link:hover::after, 
-            &-list-link.active::after {
-                background-color: $active-link-color;
-            }
-            .active {
-                color: $active-link-color;
-            }
+        .nav-list-link {
+            padding: 32px 2px 30px 2px;
         }
-
-        .wrap-nav {
-            @include flex(flex, space-between, center);
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            padding-top: 25px;
-            padding-bottom: 19px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-    
         .contacts-list {
             @include flex(flex, _, _);
             flex-direction: column;
@@ -141,7 +139,7 @@ header {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@include desc(1200px) {
 
     header {
     
@@ -191,15 +189,11 @@ header {
             }
         }
         .wrap-nav {
-            @include flex(flex, space-between, center);
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            padding-top: 25px;
-            padding-bottom: 25px;
             gap: 93px;
-            padding-left: 15px;
-            padding-right: 15px;
+
+            .nav-list-link {
+                padding: 32px  2px 24px 2px;
+            }
         }
     
         .contacts-list {

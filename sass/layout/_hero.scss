@@ -1,4 +1,5 @@
-@media screen and (max-width: 767px) {
+
+@include phone(767px) {
     .wrap-hero {
         max-width: 767px;
         width: 100%;
@@ -29,7 +30,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@include tab (1199px) {
     .wrap-hero {
         max-width: 1200px;
         width: 100%;
@@ -60,7 +61,7 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+@include desc(1200px) {
     .wrap-hero {
         max-width: 1200px;
         width: 100%;

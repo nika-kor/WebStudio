@@ -13,7 +13,19 @@
     flex-wrap: wrap;
 }
 
+@mixin phone($breakpoint){
+    @media screen and (max-width:$breakpoint){
+    @content;
+    }
+}
+
 @mixin tab($breakpoint){
+    @media screen and (max-width:$breakpoint){
+    @content;
+    }
+}
+
+@mixin desc($breakpoint){
     @media screen and (min-width:$breakpoint){
     @content;
     }

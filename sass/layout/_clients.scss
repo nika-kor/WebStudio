@@ -20,7 +20,7 @@
     outline: 1px solid $active-link-color;
 }
 
-@media screen and (max-width: 767px) {
+@include phone(767px) {
     .clients {
         padding-top: 60px;
         padding-bottom: 60px;
@@ -37,7 +37,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@include tab (1199px) {
     .clients {
         padding-top: 94px;
         padding-bottom: 94px;
@@ -54,7 +54,7 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+@include desc(1200px) {
     .clients {
         padding-top: 94px;
         padding-bottom: 94px;

@@ -21,7 +21,7 @@
             margin-bottom: 50px;
 }
 
-@media screen and (max-width: 767px) {
+@include phone(767px) {
     .section-team {
         background-color: #F5F4FA;
         padding-top: 60px;
@@ -67,7 +67,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@include tab (1199px) {
     .section-team {
         background-color: #F5F4FA;
         padding-top: 60px;
@@ -112,7 +112,7 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+@include desc(1200px) {
     .section-team {
         background-color: #F5F4FA;
         padding-top: 94px;
