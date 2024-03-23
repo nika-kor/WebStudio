@@ -534,7 +534,7 @@ header {
   text-align: left;
 }
 
-.burger {
+.menu-toggle {
   display: none;
 }
 
@@ -551,21 +551,6 @@ header {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-  header .wrap-nav .burger {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    background-color: white;
-    padding: 2px;
   }
   header .wrap-nav .nav {
     display: -webkit-box;
@@ -585,6 +570,115 @@ header {
   }
   header .wrap-nav .contacts-list {
     display: none;
+  }
+  .menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 32px;
+    background-color: white;
+    z-index: 999;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  }
+  .menu-container .mobile-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .menu-container .mobile-menu .link {
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: Roboto;
+    color: black;
+    display: block;
+    margin-bottom: 35px;
+  }
+  .menu-container .mobile-menu .active {
+    color: #2196F3;
+  }
+  .menu-container .mobile-menu-number .number {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: Roboto;
+    color: #2196F3;
+    display: block;
+    margin-top: 302px;
+    margin-bottom: 32px;
+  }
+  .menu-container .mobile-menu-number .location {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: Roboto;
+    color: #757575;
+    margin-bottom: 64px;
+  }
+  .menu-container .mobile-menu-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 64px;
+  }
+  .menu-container .mobile-menu-link .link {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: Roboto;
+    color: #2196F3;
+    border-right: 2px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .menu-container.is-open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .menu-container .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+  }
+  .menu-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-color: white;
+    padding: 2px;
+    min-height: 40px;
+    min-width: 40px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
   }
 }
 @media screen and (max-width: 1199px) {
