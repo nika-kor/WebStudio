@@ -538,6 +538,10 @@ header {
   display: none;
 }
 
+.menu-container {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   header .wrap-nav {
     display: -webkit-box;
@@ -571,7 +575,8 @@ header {
   header .wrap-nav .contacts-list {
     display: none;
   }
-  .menu-container {
+  header .menu-container {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -587,12 +592,12 @@ header {
     transition: transform 250ms ease-in-out;
     transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   }
-  .menu-container .mobile-menu {
+  header .menu-container .mobile-menu {
     padding: 0;
     margin: 0;
     list-style: none;
   }
-  .menu-container .mobile-menu .link {
+  header .menu-container .mobile-menu .link {
     font-size: 46px;
     font-style: normal;
     font-weight: 500;
@@ -601,10 +606,10 @@ header {
     display: block;
     margin-bottom: 35px;
   }
-  .menu-container .mobile-menu .active {
+  header .menu-container .mobile-menu .active {
     color: #2196F3;
   }
-  .menu-container .mobile-menu-number .number {
+  header .menu-container .mobile-menu-number .number {
     font-size: 40px;
     font-style: normal;
     font-weight: 500;
@@ -614,7 +619,7 @@ header {
     margin-top: 302px;
     margin-bottom: 32px;
   }
-  .menu-container .mobile-menu-number .location {
+  header .menu-container .mobile-menu-number .location {
     font-size: 28px;
     font-style: normal;
     font-weight: 500;
@@ -622,7 +627,7 @@ header {
     color: #757575;
     margin-bottom: 64px;
   }
-  .menu-container .mobile-menu-link {
+  header .menu-container .mobile-menu-link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -636,7 +641,7 @@ header {
         flex-wrap: wrap;
     margin-top: 64px;
   }
-  .menu-container .mobile-menu-link .link {
+  header .menu-container .mobile-menu-link .link {
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -646,17 +651,20 @@ header {
     padding-right: 10px;
     padding-left: 10px;
   }
-  .menu-container.is-open {
+  header .menu-container .mobile-menu-link .border {
+    border: none;
+  }
+  header .menu-container.is-open {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-  .menu-container .menu-toggle {
+  header .menu-container .menu-toggle {
     position: absolute;
     top: 16px;
     right: 16px;
     color: #fff;
   }
-  .menu-toggle {
+  header .menu-toggle {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -684,6 +692,9 @@ header {
 @media screen and (max-width: 1199px) {
   header .nav-list-link {
     padding: 32px 2px 37px 2px;
+  }
+  header .nav-list-link::after {
+    margin-top: -3.5px;
   }
   header .contacts-list {
     display: -webkit-box;
@@ -716,6 +727,18 @@ header {
     transition: all 250ms;
     -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 8px;
   }
   header .contacts-list-link:hover {
     color: #2196F3;
@@ -732,6 +755,18 @@ header {
     line-height: 1.1;
     letter-spacing: 0.02em;
     text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 8px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -764,6 +799,18 @@ header {
     transition: all 250ms;
     -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 8px;
   }
   header .contacts-list-link:hover {
     color: #2196F3;
@@ -780,6 +827,18 @@ header {
     line-height: 1.1;
     letter-spacing: 0.02em;
     text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 8px;
   }
 }
 @media screen and (max-width: 767px) {

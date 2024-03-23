@@ -45,7 +45,9 @@
 
             </nav>
 
-            <button class="burger">
+            <button class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
                 <svg width="24" height="16"><use href="./symbol-defs.svg#burger"></use></svg>
             </button>
             <ul class="contacts-list">
@@ -63,6 +65,32 @@
                 </li>
             </ul>
 
+        </div>
+
+        <!-- mobile -->
+
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+                <svg width="19" height="19px"><use href="./symbol-defs.svg#close"></use></svg>
+            </button>
+    
+            <ul class="mobile-menu">
+                <li><a href="./index.html" class="link active">Студія</a></li>
+                <li><a href="./portfolio.html" class="link">Портфоліо</a></li>
+                <li><a href="" class="link">Контакти</a></li>
+            </ul>
+
+            <ul class="mobile-menu-number">
+                <li><a href="tel:+38 096 111 11 11" class="number active">+38 096 111 11 11</a></li>
+                <li><a href="mailto:info@devstudio.com" class="location">info@devstudio.com</a></li>
+            </ul>
+
+            <ul class="mobile-menu-link">
+                <li><a href="" class="link">Instagram</a></li>
+                <li><a href="" class="link">Twitter</a></li>
+                <li><a href="" class="link">Facebook</a></li>
+                <li><a href="" class="link border">LinkedIn</a></li>
+            </ul>
         </div>
 
     </header>
@@ -222,6 +250,8 @@
             
         </div>
     </footer>
+
+    <script defer src="./mobile.js"></script>
 
 </body>
 </html>
