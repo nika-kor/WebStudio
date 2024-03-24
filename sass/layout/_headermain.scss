@@ -117,7 +117,7 @@ header {
                 .link {
                     @include property(46px, normal, 500, Roboto, $main-color);
                     display: block;
-                    margin-bottom: 35px;
+                    margin-bottom: 20px;
                 }
                 .active {
                 color: #2196F3;
@@ -126,25 +126,26 @@ header {
               
               .mobile-menu-number {
                 .number {
-                    @include property(40px, normal, 500, Roboto, #2196F3);
+                    @include property(35px, normal, 500, Roboto, #2196F3);
                     display: block;
-                    margin-top: 302px;
-                    margin-bottom: 32px;
+                    margin-top: 180px;
+                    margin-bottom: 20px;
                 }
                 .location {
                     @include property(28px, normal, 500, Roboto, #757575);
-                    margin-bottom: 64px;
                 }
               }
     
               .mobile-menu-link {
                 @include flex(flex, center, center);
-                margin-top: 64px;
+                margin-top: 45px;
                 .link {
                     @include property(18px, normal, 500, Roboto, #2196F3);
                     border-right: 2px solid #21212133;
                     padding-right: 10px;
                     padding-left: 10px;
+                    margin-top: 2px;
+                    margin-bottom: 2px;
                 }
                 .border {
                     border: none;
@@ -180,7 +181,7 @@ header {
     }
 }
 
-@include tab (1199px) {
+@include tab (768px) {
     header {
 
     

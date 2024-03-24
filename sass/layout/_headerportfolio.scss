@@ -117,7 +117,7 @@ header {
                 .link {
                     @include property(46px, normal, 500, Roboto, $main-color);
                     display: block;
-                    margin-bottom: 35px;
+                    margin-bottom: 20px;;
                 }
                 .active {
                 color: #2196F3;
@@ -128,7 +128,7 @@ header {
                 .number {
                     @include property(40px, normal, 500, Roboto, #2196F3);
                     display: block;
-                    margin-top: 302px;
+                    margin-top: 200px;
                     margin-bottom: 32px;
                 }
                 .location {
@@ -180,7 +180,7 @@ header {
     }
 }
 
-@include tab (1199px) {
+@include tab (768px) {
     header {
     
         .nav-list-link {

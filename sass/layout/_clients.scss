@@ -29,15 +29,23 @@
             @include flex(flex, center, center);
             gap: 30px;
             padding-top: 50px;
+            &-item {
+                // @include flex(flex, center, center);
+                max-width: 210px;
+                width: 100%;
+                flex-basis: 210px;
+                height: 92px;
+
+                .clients-link {
+                    height: 92px;
+                }
+            }
         }
-        &-link {
-            width: 210px;
-            height: 92px;
-        }
+        
     }
 }
 
-@include tab (1199px) {
+@include tab (768px) {
     .clients {
         padding-top: 94px;
         padding-bottom: 94px;

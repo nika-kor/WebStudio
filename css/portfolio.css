@@ -438,7 +438,7 @@ header {
     font-family: Roboto;
     color: black;
     display: block;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
   header .menu-container .mobile-menu .active {
     color: #2196F3;
@@ -450,7 +450,7 @@ header {
     font-family: Roboto;
     color: #2196F3;
     display: block;
-    margin-top: 302px;
+    margin-top: 200px;
     margin-bottom: 32px;
   }
   header .menu-container .mobile-menu-number .location {
@@ -523,7 +523,7 @@ header {
     outline: none;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   header .nav-list-link {
     padding: 32px 2px 30px 2px;
   }
@@ -845,7 +845,7 @@ header {
     height: 295px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .portfolio-list-img {
     max-width: 354px;
   }
@@ -1030,7 +1030,7 @@ header {
     width: 100%;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .footer-wrap {
     display: -webkit-box;
     display: -ms-flexbox;

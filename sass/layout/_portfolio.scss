@@ -86,7 +86,7 @@
     }
 }
 
-@include tab (1199px) {
+@include tab (768px) {
     .portfolio-list {
         &-img {
             max-width: 354px;
